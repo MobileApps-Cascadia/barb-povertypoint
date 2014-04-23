@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Poverty Point Archaeological Site App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<style>
+		/*Home Page Background Image*/
+		.ui-page.ui-body-c {
+			background: url(images/home_background.jpg);
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-attachment:scroll;
+			background-size:cover;  
+		}
+		/*Home Page Button Size*/
+		#home img{
+			width:80%;
+			height:80%;
+		}
+		/*Home Page Button Alignment*/
+		#home .ui-block-b{
+			padding-bottom: 20px;	
+		}
+		#home .ui-grid-a{
+			text-align:center;	
+		}
+		#home article{
+			margin-top:20px;	
+		}
+		/*Header Color for all pages*/
+		.ui-page .ui-header {
+			background: #67380e !important;
+		}
+		/*Special Home Page "i" footer*/
+		#home footer a{
+			background: #67380e !important;
+			margin-left:85%;
+		}
+		/*Map Page Background Image*/
+		#map{
+			background: url(images/map.jpg);
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-attachment:scroll;
+			background-size:cover;  
+		}
+		/*Visit, Gallery Background Color*/
+		#visit,#gallery,#ppo,#bead{
+			background: none;
+			background-color:#acb94d; 
+		}
+		.ui-page ul li{
+			background: none;
+			background-color:#87a8eb;
+		}
+		.ui-page .ui-footer nav ul li a{
+			background: #67380e !important;
+		}
+		/*Color "Back" Icon*/
+		#map a{
+			background: #67380e !important;
+		}
+		#ppo a{
+			background: #67380e !important;
+		}
+		#bead a{
+			background: #67380e !important;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page" id="home">
+        <header data-role="header" id="pp_home">
+            <h1>Poverty Point</h1>
+        </header>
+        <article data-role="content" class="ui-grid-a">
+            <a href="#map" class="ui-block-a"><img alt="map" src="images/home_buttons_map.gif">
+            </a>
+			<a href="#gallery" class="ui-block-b"><img alt="gallery" src="images/home_buttons_gallery.gif">
+            </a>
+            <a href="#visit" class="ui-block-a"><img alt="visit" src="images/home_buttons_visit.gif">
+            </a>
+		</article>
+        <footer data-position="fixed">
+   	 <a href="index.html" data-role="button" data-icon="info" data-iconpos="notext"></a>
+   </footer>  
+   </div>
+   
+<!-- MAP PAGE -->
+   <div data-role="page" id="map">
+           <header data-role="header" id="pp_map">
+        <a href="#home" data-role="button" data-icon="back" data-iconpos="notext"></a>
+            <h1>Map</h1>
+        </header>
+</div>
+
+<!-- VISIT PAGE -->
+<div data-role="page" id="visit">
+        <header data-role="header" id="pp_visit">
+            <h1>Visit</h1>
+        </header>
+        <article data-role="content">
+		<ul data-role="listview">
+			<li>
+				<a href="#">
+					<h1>Directions</h1>
+                </a>
+			</li>
+			<li>
+				<a href="#">
+					<h1>Hours</h1>
+                </a>
+			</li>
+            <li>
+				<a href="#">
+					<h1>Fees</h1>
+                </a>
+			</li>
+		</ul>
+	</article>
+	<footer data-role="footer" data-position="fixed">
+		<nav data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#" data-icon="info">Info</a></li>
+			</ul>
+		</nav>
+	</footer>
+</div>
+
+<!-- GALLERY PAGE-->
+	<div data-role="page" id="gallery">
+        <header data-role="header" id="pp_gallery">
+            <h1>Gallery</h1>
+        </header>
+        <article data-role="content">
+		<ul data-role="listview" data-filter="true">
+            <li>
+				<a href="#ppo">
+				<h1>Poverty Point Objects (PPOs)</h1>
+				<img src="images/gallery_images_ppo.jpg" alt="PPO Image" />
+				<p>These hand-formed fired earth objects, and fragments thereof, are the most common artifact type at Poverty Point. Also known as baked clay balls, cooking balls, or PPOs, these ceramic artifacts served as replacements for stone in hot rock cooking, what was the dominant cooking technology of the time.</p>
+				</a>
+			</li>
+            <li>
+				<a href="#bead">
+				<h1>Incised Bead</h1>
+				<img src="images/gallery_images_bead.jpg" alt="Incised Bead" />
+				<p>Many decorative objects have been found at Poverty Point. It is amazing that such fine detail could be achieved with crude tools...</p>
+				</a>
+			</li>
+		</ul>
+	</article>
+	<footer data-role="footer" data-position="fixed">
+		<nav data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#" data-icon="grid">Albums</a></li>
+				<li><a href="#" data-icon="info">Info</a></li>
+			</ul>
+		</nav>
+	</footer>
+   </div>
+   <!-- Page Photos -->
+
+
+<!-- Page PPO -->
+	<div data-role="page" id="ppo">
+		<header data-role="header" id="ppo">
+			<h1>Poverty Point Objects (PPOs)</h1>
+			<a href="#gallery" data-icon="back" data-iconpos="notext">Photos</a>
+		</header>
+		<img src="images/gallery_images_ppo.jpg" alt="PPO Image" class="fullscreen" />
+        </div>
+<!-- Page Bead --> 
+	<div data-role="page" id="bead">
+		<header data-role="header" id="bead">
+			<h1>Incised Bead</h1>
+			<a href="#gallery" data-icon="back" data-iconpos="notext">Photos</a>
+		</header>
+		<img src="images/gallery_images_bead.jpg" alt="Incised Bead" class="fullscreen" />
+        </div>
+
+</body>
+</html>
